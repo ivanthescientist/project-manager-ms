@@ -1,8 +1,11 @@
 package com.isc.project.manager.controller;
 
 import com.isc.project.manager.api.ProjectDTO;
+import com.isc.project.manager.persistence.domain.UserType;
+import com.isc.project.manager.security.AuthenticatedUser;
 import com.isc.project.manager.service.ProjectProxyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,8 +21,12 @@ public class ProjectController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public List<ProjectDTO> findAll() {
-        return proxyService.findAll();
+    public List<ProjectDTO> findAll(@AuthenticationPrincipal AuthenticatedUser user) {
+        if(user.isAdmin()) {
+            return proxyService.findAll();
+        } else {
+            return proxyService.findAllByTenant(user.getTenantCode());
+        }
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
