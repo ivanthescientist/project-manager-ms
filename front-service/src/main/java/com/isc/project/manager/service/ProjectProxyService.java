@@ -1,6 +1,6 @@
 package com.isc.project.manager.service;
 
-import com.isc.project.manager.api.ProjectDTO;
+import com.isc.project.manager.api.dto.ProjectDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpEntity;

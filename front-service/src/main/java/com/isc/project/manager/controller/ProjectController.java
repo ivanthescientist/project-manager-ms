@@ -1,7 +1,6 @@
 package com.isc.project.manager.controller;
 
-import com.isc.project.manager.api.ProjectDTO;
-import com.isc.project.manager.persistence.domain.UserType;
+import com.isc.project.manager.api.dto.ProjectDTO;
 import com.isc.project.manager.security.AuthenticatedUser;
 import com.isc.project.manager.service.ProjectProxyService;
 import org.springframework.beans.factory.annotation.Autowired;

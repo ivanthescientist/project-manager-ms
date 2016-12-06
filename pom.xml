@@ -32,10 +32,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>persistence-api</module>
-        <module>project-manager-api</module>
-        <module>project-api-service</module>
+        <module>common</module>
         <module>front-service</module>
+        <module>project-service</module>
     </modules>
 
     <dependencies>
