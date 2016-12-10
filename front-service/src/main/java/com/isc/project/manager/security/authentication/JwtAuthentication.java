@@ -1,4 +1,4 @@
-package com.isc.project.manager.security;
+package com.isc.project.manager.security.authentication;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

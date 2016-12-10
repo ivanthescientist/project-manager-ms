@@ -2,7 +2,7 @@ package com.isc.project.manager.controller;
 
 import com.isc.project.manager.persistence.domain.UserEntity;
 import com.isc.project.manager.persistence.repository.UserEntityRepository;
-import com.isc.project.manager.security.TokenField;
+import com.isc.project.manager.security.authentication.TokenField;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -50,6 +50,6 @@ public class AuthenticationController {
     }
 
     private Date getExpirationDate() {
-        return Date.from(LocalDateTime.now().plusDays(1).atZone(ZoneId.systemDefault()).toInstant());
+        return Date.from(LocalDateTime.now().plusDays(365).atZone(ZoneId.systemDefault()).toInstant());
     }
 }

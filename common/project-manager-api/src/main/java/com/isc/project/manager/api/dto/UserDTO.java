@@ -1,6 +1,6 @@
 package com.isc.project.manager.api.dto;
 
-public class UserDTO {
+public class UserDTO implements SecuredDTO {
     private Long id;
     private String username;
     private String password;
@@ -39,10 +39,12 @@ public class UserDTO {
         this.type = type;
     }
 
+    @Override
     public String getTenantCode() {
         return tenantCode;
     }
 
+    @Override
     public void setTenantCode(String tenantCode) {
         this.tenantCode = tenantCode;
     }

@@ -2,7 +2,7 @@ package com.isc.project.manager.controller;
 
 import com.isc.project.manager.api.dto.TenantDTO;
 import com.isc.project.manager.api.exception.EntityNotFoundException;
-import com.isc.project.manager.security.AuthenticatedUser;
+import com.isc.project.manager.security.authentication.AuthenticatedUser;
 import com.isc.project.manager.service.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

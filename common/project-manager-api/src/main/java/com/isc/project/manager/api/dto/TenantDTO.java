@@ -1,6 +1,6 @@
 package com.isc.project.manager.api.dto;
 
-public class TenantDTO {
+public class TenantDTO implements SecuredDTO {
     private Long id;
     private String code;
     private String name;
@@ -36,5 +36,15 @@ public class TenantDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String getTenantCode() {
+        return code;
+    }
+
+    @Override
+    public void setTenantCode(String tenantCode) {
+        this.code = tenantCode;
     }
 }

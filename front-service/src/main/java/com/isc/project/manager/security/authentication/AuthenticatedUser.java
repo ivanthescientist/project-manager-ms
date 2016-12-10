@@ -1,4 +1,4 @@
-package com.isc.project.manager.security;
+package com.isc.project.manager.security.authentication;
 
 import com.isc.project.manager.persistence.domain.UserType;
 
