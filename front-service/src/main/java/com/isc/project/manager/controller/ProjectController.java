@@ -36,7 +36,8 @@ public class ProjectController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public ProjectDTO update(@PathVariable Long id, @RequestBody ProjectDTO projectDTO) {
-        return proxyService.update(id, projectDTO);
+        projectDTO.setId(id);
+        return proxyService.update(projectDTO);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

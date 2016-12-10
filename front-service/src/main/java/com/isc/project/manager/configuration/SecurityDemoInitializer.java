@@ -17,7 +17,9 @@ public class SecurityDemoInitializer implements InitializingBean {
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public SecurityDemoInitializer(TenantEntityRepository tenantEntityRepository, UserEntityRepository userEntityRepository, PasswordEncoder passwordEncoder) {
+    public SecurityDemoInitializer(TenantEntityRepository tenantEntityRepository,
+                                   UserEntityRepository userEntityRepository,
+                                   PasswordEncoder passwordEncoder) {
         this.tenantEntityRepository = tenantEntityRepository;
         this.userEntityRepository = userEntityRepository;
         this.passwordEncoder = passwordEncoder;

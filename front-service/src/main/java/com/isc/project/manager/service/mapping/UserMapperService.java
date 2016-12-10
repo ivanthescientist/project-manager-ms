@@ -1,4 +1,4 @@
-package com.isc.project.manager.service;
+package com.isc.project.manager.service.mapping;
 
 import com.isc.project.manager.api.dto.UserDTO;
 import com.isc.project.manager.persistence.domain.UserEntity;
@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserMapperService {
+    private final PasswordEncoder passwordEncoder;
+
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    public UserMapperService(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public UserDTO toDTO(UserEntity entity) {
         UserDTO dto = new UserDTO();

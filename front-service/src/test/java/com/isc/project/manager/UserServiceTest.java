@@ -1,8 +1,11 @@
 package com.isc.project.manager;
 
 import com.isc.project.manager.api.dto.UserDTO;
+import com.isc.project.manager.persistence.repository.TenantEntityRepository;
+import com.isc.project.manager.persistence.repository.UserEntityRepository;
 import com.isc.project.manager.service.UserService;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +18,18 @@ public class UserServiceTest {
 
     @Autowired
     private UserService service;
+
+    @Autowired
+    private UserEntityRepository userEntityRepository;
+
+    @Autowired
+    private TenantEntityRepository tenantEntityRepository;
+
+    @Before
+    public void setUp() {
+        tenantEntityRepository.deleteAll();
+        userEntityRepository.deleteAll();
+    }
 
     @Test
     public void testBasicCrud() {

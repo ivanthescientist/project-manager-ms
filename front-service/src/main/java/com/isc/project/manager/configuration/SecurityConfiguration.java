@@ -1,10 +1,7 @@
 package com.isc.project.manager.configuration;
 
-import com.isc.project.manager.persistence.domain.UserEntity;
-import com.isc.project.manager.persistence.domain.UserType;
-import com.isc.project.manager.persistence.repository.UserEntityRepository;
+
 import com.isc.project.manager.security.authentication.JwtAuthenticationFilter;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

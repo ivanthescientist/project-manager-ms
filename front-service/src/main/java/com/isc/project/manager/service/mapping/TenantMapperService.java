@@ -1,4 +1,4 @@
-package com.isc.project.manager.service;
+package com.isc.project.manager.service.mapping;
 
 import com.isc.project.manager.api.dto.TenantDTO;
 import com.isc.project.manager.persistence.domain.TenantEntity;

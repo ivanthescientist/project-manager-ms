@@ -1,8 +1,11 @@
 package com.isc.project.manager;
 
 import com.isc.project.manager.api.dto.TenantDTO;
+import com.isc.project.manager.persistence.repository.TenantEntityRepository;
+import com.isc.project.manager.persistence.repository.UserEntityRepository;
 import com.isc.project.manager.service.TenantService;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +18,18 @@ public class TenantServiceTest {
 
     @Autowired
     private TenantService service;
+
+    @Autowired
+    private TenantEntityRepository tenantEntityRepository;
+
+    @Autowired
+    private UserEntityRepository userEntityRepository;
+
+    @Before
+    public void setUp() {
+        tenantEntityRepository.deleteAll();
+        userEntityRepository.deleteAll();
+    }
 
     @Test
     public void testBasicCRUD() {
